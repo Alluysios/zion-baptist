@@ -1,0 +1,75 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: $color__border-button;
+	border-radius: 3px;
+	background: $color__background-button;
+	color: rgba(0, 0, 0, .8);
+	@include font-size(0.75);
+	line-height: 1;
+	padding: .6em 1em .4em;
+
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+}
+
+// Custom nav scss using beem
+
+.navigation {
+
+	&__button {
+		border: none;
+		background: none;
+		font-size: 1.25rem !important;
+	}
+
+}
+
+// Custom button
+
+// .custom-button {
+// 	border-radius: 4px;
+// 	background-color: #f4511e;
+// 	border: none;
+// 	color: #FFFFFF;
+// 	text-align: center;
+// 	font-size: 28px;
+// 	padding: 20px;
+// 	width: 200px;
+// 	transition: all 0.5s;
+// 	cursor: pointer;
+// 	margin: 5px;
+//   }
+  
+  .hover-animate {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+  }
+  
+  .hover-animate:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+  }
+  
+  .custom-button:hover span {
+	padding-right: 25px;
+  }
+  
+  .custom-button:hover span:after {
+	opacity: 1;
+	right: 0;
+  }

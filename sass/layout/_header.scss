@@ -1,0 +1,173 @@
+$tablet: 600px;
+$desktop: 960px;
+$tabletQuoteWidth: 100%;
+$bodycolor: #fff;
+$customMobileHeader: 39vh;
+$center:            0 auto;
+$desktopQuoteFont: 1.5rem;
+
+// none bem styles are html tags or plugin classes
+
+h1 {
+    // display: none;
+}
+
+.widget_randombibleversewidget {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.925);
+        text-align: center;
+        top: 10%;
+        padding: 0px 20px 0px 20px;
+        width: 100%;
+
+        // END OF PARENT CONTAINER
+        .dailyVerses.bibleText{
+            background-color: rgba(221, 221, 221, 0.96);
+            border-radius: 5px;
+            border-left: groove 8px #dbb878;
+            max-height: 100px;
+            overflow-y: scroll;
+            color: #555;
+            padding: 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .dailyVerses.bibleVerse {
+            width: 250px;
+            background-color: rgb(181, 145, 46);
+            margin: 0 auto;
+            padding: 5px;
+            border-radius: 3px;
+
+            a {
+                color: #ccc;
+            }
+            a:hover {
+                color: #9c8b5d;
+            }
+
+            @media screen and (min-width: 650px) {
+                margin: 0 auto auto;
+            }
+
+
+        }
+        // END OF .dailyVerses CONTAINER
+
+        @media screen and (min-width: $tablet){
+
+            top: 15%;
+
+            .widget_randombibleversewidget {
+                padding: 0px 40px 0px 40px;
+            }
+
+            .dailyVerses.bibleText {
+            	font-size: 1.3em;
+                border-left-width: 20px;
+                max-height: 160px;
+            }
+
+        } // END BREAK MEDIUM
+
+
+        @media screen and (min-width: $break-large){
+
+
+
+        } // END BREAK LARGE
+
+
+}
+
+.header {
+
+   position: relative;
+
+    &__nav {
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        background: rgba(0, 0, 255, 0.137);
+        display: flex;
+        justify-content: space-between;
+        top: 0;
+        left: 0;
+        padding: 10px 20px 10px 20px;
+    }
+
+    &__custom {
+        height: $customMobileHeader;
+    }
+
+}
+
+
+.ccontent {
+
+    .wp-block-cover {
+        margin: 0 0 0 0;
+    }
+
+    p {
+        color: $bodycolor;
+    }
+
+    h2 {
+        color: $bodycolor;
+    }
+
+    a:link {
+        color: none;
+        text-decoration: none;
+    }
+
+}
+
+.navigation {
+
+    ul {
+       position: absolute;
+    }
+
+}
+
+@media screen and (min-width: $tablet) {
+
+    .header {
+        &__custom {
+            height: 55vh;
+        }
+    }
+
+    .widget_randombibleversewidget {
+        width: $tabletQuoteWidth;
+    }
+}
+
+@media screen and (min-width: $desktop) {
+
+    .widget_randombibleversewidget {
+        top: 20%;
+        font-size: 1.2rem;
+        padding: 0px 70px 0px 70px;
+    }
+
+    .header {
+        &__custom {
+            height: 75vh;
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+
+    .widget_randombibleversewidget {
+        font-size: 1.5rem;
+    }
+
+}

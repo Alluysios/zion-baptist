@@ -1,0 +1,146 @@
+.communityNotice {
+    max-width: 1200px;
+    padding: 20px;
+
+    h2 {
+        color: #fcb900 !important;
+    }
+    @media screen and (min-width: $break-smallish){
+        margin: 0 auto;
+
+        h2 {
+            font-size: 2em;
+        }
+
+        &__wrap {
+        	display: grid;
+        	grid-template-columns: 1fr 1fr;
+        	justify-items: center;
+
+            p {
+                color: white !important;
+                font-size: 1.2em;
+            }
+        }
+        &__content {
+            align-self: center;
+            justify-self: center;
+        }
+        &__image {
+        	width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    } //end media min-width
+} //end communityNotice
+
+
+//=========================================================================
+//------------------- template parts - community_notice -------------------
+//=========================================================================
+.communityArchive{ // FOUND IN archive-community_notice.php
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.communityPost {
+
+    &__container {
+
+        display: grid;
+        align-items: center;
+        padding: 10px;
+        background-color: #515151;
+        border-left: 10px groove #fcb900;
+
+        margin: 10px auto;
+
+        @media screen and (min-width: 600px){
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            width: 500px;
+        } //END break 600px
+
+
+    } // END OF container
+
+
+
+} // END OF .event-post
+
+
+.massTimes {
+    
+    p {
+        font-size: 18px;
+        color: #e4e4e4;
+    }
+
+    @media screen and (min-width: 550px) {
+        width: 500px;
+    }
+    @media screen and (min-width: 768px ) {
+        width: 768px;
+    }
+    @media screen and (min-width: 1000px) {
+        width: 1000px;
+    }
+
+    &__container {
+        
+        @media screen and (min-width: 550px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .massTimes__wrap {
+
+            margin: 2em 0;
+
+            @media screen and (min-width: 550px) {
+                width: 45%;
+                margin: 0;
+                background-color: #354e67;
+                margin: 10px;
+                padding: 20px;
+                border-radius: 10px;
+            }
+            @media screen and (min-width: 1000px) {
+                width: 30%;
+            }
+
+
+            .massTimes__day {
+                border-bottom: 2px solid snow;
+                width: 7em;
+                font-size: 1.5em;
+            }
+
+
+            .massTImes__event-wrap {
+                border-left: 5px groove #fcb900;
+                padding-left: 10px;
+                margin-left: 2em;
+
+
+                .massTimes__time {
+                    color: darkkhaki !important;
+                    letter-spacing: 2px;
+                    font-weight: bold;
+                }
+
+
+            } // EEND OF .event-wrap
+
+            
+        } // END OF .wrap
+
+    } // END OF .container
+
+
+} // END OF .massTimes
